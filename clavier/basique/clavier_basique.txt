@@ -1,0 +1,9 @@
+use_synth :piano
+
+set :scale, scale(:c3, :major)
+
+live_loop :clavier_basique do
+  use_real_time
+  n = sync "/osc/clavier"
+  play get[:scale][n[0]]
+end
