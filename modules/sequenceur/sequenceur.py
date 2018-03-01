@@ -12,7 +12,6 @@
 #sudo systemctl enable pigpiod.service          (followed by a reboot)
 #The program also requires gpiozero to be installed and python-osc
 
-
 from gpiozero import Button
 from pythonosc import osc_message_builder
 from pythonosc import udp_client
@@ -38,36 +37,35 @@ button7 = Button(21)
 #This function is called when the button connected to the GPIO is pushed
 def msg0():
     #sender client set up in __main__ below
-    sender.send_message('/note',0)
+    sender.send_message('/sequenceur',0)
     sleep(0.1)
 def msg1():
     #sender client set up in __main__ below
-    sender.send_message('/note',1)
+    sender.send_message('/sequenceur',1)
     sleep(0.01)
 def msg2():
     #sender client set up in __main__ below
-    sender.send_message('/note',2)
+    sender.send_message('/sequenceur',2)
     sleep(0.01)
-
 def msg3():
     #sender client set up in __main__ below
-    sender.send_message('/note',3)
+    sender.send_message('/sequenceur',3)
     sleep(0.01)
 def msg4():
     #sender client set up in __main__ below
-    sender.send_message('/note',4)
+    sender.send_message('/sequenceur',4)
     sleep(0.01)
 def msg5():
     #sender client set up in __main__ below
-    sender.send_message('/note',5)
+    sender.send_message('/sequenceur',5)
     sleep(0.01)
 def msg6():
     #sender client set up in __main__ below
-    sender.send_message('/note',6)
+    sender.send_message('/sequenceur',6)
     sleep(0.01)
 def msg7():
     #sender client set up in __main__ below
-    sender.send_message('/note',7)
+    sender.send_message('/sequenceur',7)
     sleep(0.01)
 
 #this is where the msg routing is activated

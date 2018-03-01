@@ -4,6 +4,6 @@ set :scale, scale(:d2, :minor)
 
 live_loop :simple_piano do
   use_real_time
-  n = sync "/osc/note"
+  n = sync "/osc/sequenceur"
   play get[:scale][n[0]],sustain: 1,release: 0.2, cutoff_attack: 0.5, cutoff_release: 0.5
 end
